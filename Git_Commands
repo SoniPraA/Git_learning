@@ -1,0 +1,14 @@
+Local
+git Status
+git add/rm
+git commit
+git log
+git checkout -b
+git branch
+
+
+Remote
+git push
+git fetch
+git pull
+Resolving conflit
