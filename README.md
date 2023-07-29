@@ -1,5 +1,5 @@
 # KnowledgedGate Git Learning Project
 
-This repo is only ment to be used by learner to learn git and try different git commands.
+This repo is only meant to be used by learners to learn git and try different git commands.
 
-Pratik Soni
+This is the second change that I am doing in the readme file.
