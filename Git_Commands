@@ -8,8 +8,26 @@ git branch
 git stash #Temp storage
 git reset #To unstaged the file; We can use this command before commit of any file
 git revert #Undo an existing commit 
+
+How to remove untracked files
 git clean -n     #dry run
 git clean -f     #forcefully
+
+Tags
+Tag operation allows giving meaningful names to a specific version in the repository
+To apply Tag
+git tag -a <tag name> -m <message> <commit ID>
+
+To see the list of Tags
+git tag
+
+To see particular commit content by using the tag
+git show <tag name>
+
+To delete a Tag
+git tag -d <tag name>
+
+git clone <Repository URL>
 
 
 Remote
