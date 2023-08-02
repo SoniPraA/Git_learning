@@ -8,6 +8,9 @@ git branch
 git stash #Temp storage
 git reset #To unstaged the file; We can use this command before commit of any file
 git revert #Undo an existing commit 
+git clean -n     #dry run
+git clean -f     #forcefully
+
 
 Remote
 git push
