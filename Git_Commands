@@ -5,7 +5,8 @@ git commit
 git log
 git checkout -b
 git branch
-
+git stash #Temp storage
+git reset #To unstaged the file
 
 Remote
 git push
