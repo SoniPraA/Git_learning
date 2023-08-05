@@ -1,0 +1,14 @@
+What is Docker
+
+The container is like a Virtual Machine
+Docker is a tool that creates VM
+Docker Engine
+
+Docker is an open source Centralised platform designed to Create, Deploy and Run Applications.
+Docket uses a container on the host OS to run applications. It allows applications to use the same Linux kernel as the system on the host computer, rather than creating a whole virtual OS.
+We can install Docker on any OS but the Docker engine runs on Linux distribution.
+Docker is written in the "Go" language.
+Docker is a tool that performs OS-level virtualization, also known as containerization.
+Before Docker, many users face the problem that a particular code runs the developer system but in the user's system.
+Docker was first released in March 2013. Solman Hykes and Sebastian Pahl develop it.
+Docker is a set of platforms as a service that uses OS-level virtualization where as VMware uses Hardware level virtualization.
