@@ -31,3 +31,19 @@ dicker stop <container_name/id>
 
 To delete container
 docker rm <container_name>
+
+To see the diff between the base image and change image
+docker diff <image_name>
+output
+C /tmp
+A /tmp/pratikfile
+C /root
+A /root/.bash_history
+
+Ceate image of this container
+docker commit <new_name> <existing_image_name>
+
+Create container from this image
+docker run -it --name <new_name> <existing_image_name> /bin/bash
+
+
