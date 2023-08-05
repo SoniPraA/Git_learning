@@ -1,0 +1,33 @@
+To see all images presant in your local machine.
+docker images
+
+To find out images in docker hub
+docker search jenkins
+
+To download images from dockerhub to local machine
+docker pull jenkins
+
+To give name to container
+docker run -it --name <Name> <image_name> /bin/bash
+(Create+Start -i=interactive mode -t=terminal)
+
+To check servis is start or not
+Service docker status
+
+To start Container
+docker start <container_name>
+
+To go inside container
+docker attach <container_name>
+
+To see all containers
+docker ps -a  (-a = all)
+
+To see only running containers
+docker ps   (ps=process status)
+
+To stop container
+dicker stop <container_name/id>
+
+To delete container
+docker rm <container_name>
