@@ -46,3 +46,35 @@ ls/myvolume1
 you can see samplefile here
 
 
+Dockerfile Sample
+
+FROM ubuntu
+WORKDIR /tmp
+RUN echo "Vivaan and Vihaan" > /tmp/testfile
+ENV myname VivaanVihaan
+COPY testfile1 /tmp
+ADD test.tar.gz /tmp
+
+
+docker run -it --name container3 -v /volume2 ubuntu /bin/bash
+
+Volumes (Host <=> Container)
+
+verify files in /home/ec2-user
+
+docker run -it --name hostcont -v /home/ec2-user:/rajput --privileged=true ubuntu /bin/bash
+
+cd /rajput
+Do ls, now you can see all files of host machine
+touch rajputfile (in container)
+exit
+Now check in ec2 machine, you can see the file.
+
+Some other commands
+docker volume ls
+docker volume create <volume_name>
+docker volume rm <volume_name>
+docker volume prune (It removed all unused docker volume)
+docker volume inspect <volume_name>
+docker container inspect <container_name>
+
