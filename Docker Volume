@@ -1,0 +1,48 @@
+Docker Volume and how to share it.
+
+Volume is simply a directory inside our container
+Firstly, we have to declare the directory as a volume and then share volume
+Evenif we stop container, still we can access volume
+Volume will be created in one container
+You can declare a directory as a volume, only while creating container
+You con't create volume from existing container
+You can share one volume across any number of containers
+Volume will not be included when you update an image
+You can mapped volume in two ways:-
+1. Container <=> Container
+2. Host <=> Container
+
+Benefits of Volume
+Decoupling Container from storage
+Share Volume among different containers
+Attach Volume to containers
+On deleting container volume does not delete
+
+Creating Volume From Dcokerfile
+1. Create a Dockerfile and write
+FROM ubuntu
+VOLUME ["/muvolume1"]
+
+Then create image from this Dockerfile
+Docker build -t myimage .
+
+Now create a container from this image & run
+docker run -it --name container1 myimage /bin/bash
+
+Now do ls. you can see myvolume1
+
+Now, share Volume with another container
+Container1 <==> Container2
+
+docker run -it --name container2 --previleged=true --volumes-from container1 ubuntu /bin/bash
+
+Now after creating container2, myvolume1 is visible whatever you do 
+in one volume, can see from other volume
+
+touch /myvolume1/samplefile
+docker start container1
+docker attach container1
+ls/myvolume1
+you can see samplefile here
+
+
