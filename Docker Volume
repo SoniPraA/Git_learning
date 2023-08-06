@@ -23,7 +23,7 @@ Creating Volume From Dcokerfile
 FROM ubuntu
 VOLUME ["/muvolume1"]
 
-Then create image from this Dockerfile
+Then create an image from this Dockerfile
 Docker build -t myimage .
 
 Now create a container from this image & run
@@ -34,10 +34,10 @@ Now do ls. you can see myvolume1
 Now, share Volume with another container
 Container1 <==> Container2
 
-docker run -it --name container2 --previleged=true --volumes-from container1 ubuntu /bin/bash
+docker run -it --name container2 --privileged=true --volumes-from container1 ubuntu /bin/bash
 
 Now after creating container2, myvolume1 is visible whatever you do 
-in one volume, can see from other volume
+in one volume, can see from other volumes
 
 touch /myvolume1/samplefile
 docker start container1
