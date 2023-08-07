@@ -1,0 +1,59 @@
+Docker Port Expose
+
+Difference between docker attach and docker exec
+
+Docker exec creates a new process in the container's environment while docker attach
+just connect the standard input/output of the main process inside the container to 
+corresponding standard input/output error of the current terminal.
+
+Docker exec is specifically for running new things in a already started containers, 
+be it a shell or other process.
+
+Pid => Process ID
+PPID => Parent Process ID
+
+What is the difference between expose and publish (-p) a docker
+
+Basically you have three options :-
+1. Neither specify expose not -p
+2. Only specify expose
+3. Specify expose and -p
+
+1. If you specify neither expose nor -p, the service in the container will only be 
+accessible from inside the container itself.
+
+2. If you expose a port, the service in the conatiner is not accessible from outside
+docker, but form inside other docker containers, so this is good for inter-container communication.
+ 
+3. If you expose and -p a port, ther service in the ocntainer is accessible from anywhere, even
+outside docker.
+
+If you do -p but do not ecpose docker does an implicit expose. this is because, if a port is open to the public, it is 
+automatically also open to the other docker containers. Hence "-p" incluudes expose.
+
+login into AWWS account create one linux instance.
+Now go tot putty > login as > ec2-user
+sudo su
+yum update -y
+yum install docker -y
+service docker start
+
+docker run -td --name <container_name> -p 80:80 ubuntu
+(-d = daemon 80:80 = Port or publish : container)
+
+dicker ps
+docker port <container_name>
+O/p > 80/TCP > 0.0.0.0/80
+
+docker exec -it <container_name> /bin/bash
+apt-get update
+apt-get install apache2 -y
+
+cd /var/www/html
+echo "Subscribe Technical Guftgu" >index.html
+
+service apache2 start
+docker run -it --name <container_name> myjenkins -p 8080:8080 jenkins 
+
+ 
+
