@@ -1,23 +1,23 @@
-To see all images presant in your local machine.
+To see all images present in your local machine.
 docker images
 
-To find out images in docker hub
-docker search jenkins
+To find out images in the docker hub
+docker search Jenkins
 
-To download images from dockerhub to local machine
-docker pull jenkins
+To download images from the docker hub to the local machine
+docker pull Jenkins
 
-To give name to container
+To give the name of the container
 docker run -it --name <Name> <image_name> /bin/bash
 (Create+Start -i=interactive mode -t=terminal)
 
-To check servis is start or not
+To check service is starting or not
 Service docker status
 
 To start Container
 docker start <container_name>
 
-To go inside container
+To go inside the container
 docker attach <container_name>
 
 To see all containers
@@ -32,7 +32,7 @@ dicker stop <container_name/id>
 To delete container
 docker rm <container_name>
 
-To see the diff between the base image and change image
+To see the diff between the base image and the changed image
 docker diff <image_name>
 output
 C /tmp
@@ -40,10 +40,10 @@ A /tmp/pratikfile
 C /root
 A /root/.bash_history
 
-Ceate image of this container
+Create image of this container
 docker commit <new_name> <existing_image_name>
 
-Create container from this image
+Create a container from this image
 docker run -it --name <new_name> <existing_image_name> /bin/bash
 
 
